@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+.slider h3,
+.slider h5,
+.clients h3 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-container {
+    height: 20%;
+}
+
+.parallax img {
+    filter: grayscale(1);
+    opacity: 0.5 !important;
+}
+
+.clients img {
+    max-width: 150px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+}
+
+.cctv-header {
+    font-family: 'Courgette', cursive;
+}
+
+.btn-im {
+    background-image: linear-gradient(to left, #0079fd, #0661e1, #0849c5, #0631a9, #01198e);
+    border-radius: 20px;
+    font-size: 20px;
+
+}
+
+.btn {
+    margin: 12px;
+}
+
+#paket {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: 0 40%;
+}
+
+#paket.paket {
+    background-image: url('../img/other/awesome-feat-bg-2.png') !important;
+}
+
+#about {
+    background-repeat: no-repeat;
+    background-image: url('../img/other/awesome-feat-bg-2.png') !important;
+}
+
+#hubungi {
+    padding: 12px 0;
+}
+
+.brand-logo .logo {
+    padding-top: 6px;
+    height: 55px;
+}
