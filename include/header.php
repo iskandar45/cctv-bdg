@@ -30,7 +30,7 @@
             <i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="index.php">HOME</a></li>
-            <li><a href="">PROYEK KAMI</a></li>
+            <li><a href="project.php">PROYEK KAMI</a></li>
             <li><a href="#footer">HUBUNGI KAMI</a></li>
           </ul>
         </div>
@@ -41,6 +41,6 @@
   <!-- sidenav -->
   <ul class="sidenav" id="mobile-nav">
     <li><a href="index.php">HOME</a></li>
-    <li><a href="">PROYEK KAMI</a></li>
+    <li><a href="project.php">PROYEK KAMI</a></li>
     <li><a href="#footer">HUBUNGI KAMI</a></li>
   </ul>

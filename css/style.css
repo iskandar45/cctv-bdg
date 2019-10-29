@@ -78,3 +78,7 @@ a.link:hover {
   font-weight: bold;
   color: red;
 }
+
+#project.container {
+  margin-top: 20px;
+}
