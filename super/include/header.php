@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+  header('location:login.php');
+} else {
+  $username = $_SESSION['username'];
+  $last_login = $_SESSION['last_login'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,8 +84,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" />
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small im-user"><?= strtoupper($username) ?> </span>
+                <img class="img-profile rounded-circle" src="../img/other/user.png" />
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

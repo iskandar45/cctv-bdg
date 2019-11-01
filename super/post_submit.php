@@ -11,5 +11,10 @@ $query = "INSERT INTO post (id, title, content, date ) VALUES('$id','$title','$c
 $exec = mysqli_query($con, $query);
 
 if ($exec) {
-  echo 'sukses';
-}
+  ?>
+  <script>
+    alert('Berhasil ditambahkan!');
+    location.href = 'blog.php';
+  </script>
+<?php
+} ?>

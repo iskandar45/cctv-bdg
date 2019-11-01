@@ -5,9 +5,11 @@
 .clients h3 {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
 .slides li img {
   filter: brightness(0.5);
 }
+
 .parallax-container {
   height: 20%;
 }
@@ -27,14 +29,12 @@
 }
 
 .btn-im {
-  background-image: linear-gradient(
-    to left,
-    #0079fd,
-    #0661e1,
-    #0849c5,
-    #0631a9,
-    #01198e
-  );
+  background-image: linear-gradient(to left,
+      #0079fd,
+      #0661e1,
+      #0849c5,
+      #0631a9,
+      #01198e);
   border-radius: 20px;
   font-size: 20px;
 }
@@ -81,4 +81,8 @@ a.link:hover {
 
 #project.container {
   margin-top: 20px;
+}
+
+.im-user {
+  text-transform: uppercase;
 }

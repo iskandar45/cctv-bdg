@@ -1,5 +1,6 @@
 <?php include 'include/header.php'; ?>
 
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <!-- Page Heading -->
@@ -9,8 +10,8 @@
       <h6 class="m-0 font-weight-bold text-primary">Selamat Datang!</h6>
     </div>
     <div class="card-body text-center">
-      <h3>Selamat Datang, {Admin}!</h3> <br>
-      last login : {dd-mm-yyyy} <br>
+      <h3>Selamat Datang, <?= ucfirst($username) ?>!</h3> <br>
+      Terakhir diakses pada : <b> <?= $last_login ?> </b><br>
       <hr>
       <a class="btn btn-primary shadow-sm" href="blog.php">Mulai!</a>
     </div>

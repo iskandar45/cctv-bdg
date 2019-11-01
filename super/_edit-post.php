@@ -11,5 +11,10 @@ $query = "UPDATE post SET title = '$title',content = '$content',date = '$date' w
 $exec = mysqli_query($con, $query);
 
 if ($exec) {
-  echo 'sukses';
-}
+  ?>
+  <script>
+    alert('Berhasil diubah!');
+    location.href = 'blog.php';
+  </script>
+<?php
+} ?>

@@ -1,29 +1,41 @@
 <?php include 'include/header.php' ?>
-
+<?php include 'super/include/config.php' ?>
+<?php
+$id = $_GET['id'];
+$data = mysqli_query($con, "select * from post where id = '$id'");
+?>
 <section id="project">
   <div class="container">
     <div class="row">
-      <div class="col l8 s12">
-        <h3>Pemasangan di Bank Muamalat</h3>
-        <small>Diposting pada {Rabu, 12 Maret 2019}</small>
-        <hr>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde distinctio, a optio voluptas hic at. Porro nostrum impedit illo laboriosam voluptatum debitis officiis molestiae, inventore neque repellendus, dolores quam! Ipsam? <br>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur adipisci autem delectus molestiae, repudiandae unde incidunt ut repellendus nemo. Veritatis aperiam corrupti enim error tempore eaque in deserunt dolore?
-      </div>
+      <?php foreach ($data as $d) : ?>
+        <div class="col l8 s12">
+          <h3><?= $d['title'] ?></h3>
+          <small>Diposting pada <span style="color: blue; font-weight: bold;"><?= date('D, d M Y H:i:s', $d['date']) ?></span></small>
+          <hr>
+          <?= $d['content'] ?>
+        </div>
+      <?php endforeach; ?>
+
+
       <div class="col l4 s12">
         <h3>Project Kami</h3>
-        <small>Terakhir diupdate pada {Rabu, 12 Maret 2019}</small>
+        <?php
+        $data2 = mysqli_query($con, "SELECT * FROM post ORDER BY id DESC LIMIT 1");
+        foreach ($data2 as $d2) :
+          ?>
+          <small>Terakhir diupdate pada <?= date('D, d M Y', $d2['date']) ?></small>
+        <?php endforeach; ?>
         <hr>
         <ol>
-          <li> <a href="rincian.php">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
-          <li> <a href="">projek 1</a></li>
+          <?php
+          $data3 = mysqli_query($con, "SELECT * FROM post ORDER BY id DESC LIMIT 5");
+          foreach ($data3 as $d3) :
+            ?>
+            <li>
+              <a href="rincian.php?id=<?= $d3['id'] ?>"><?= $d3['title'] ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
         </ol>
       </div>
     </div>
