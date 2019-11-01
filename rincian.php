@@ -29,11 +29,13 @@ $data = mysqli_query($con, "select * from post where id = '$id'");
         <ol>
           <?php
           $data3 = mysqli_query($con, "SELECT * FROM post ORDER BY id DESC LIMIT 5");
-          foreach ($data3 as $d3) :
-            ?>
+          foreach ($data3 as $d3) : ?>
             <li>
               <a href="rincian.php?id=<?= $d3['id'] ?>"><?= $d3['title'] ?>
               </a>
+              <div>
+                <?= $d3['content'] ?>
+              </div>
             </li>
           <?php endforeach; ?>
         </ol>
